@@ -8,6 +8,8 @@
 
 The goal of zly is to help me.
 
+主要用于人口普查数据的清洗、年龄分组和省份分组的转化
+
 [Manuals website](https://zly2024.netlify.app/)
 
 ## Installation
