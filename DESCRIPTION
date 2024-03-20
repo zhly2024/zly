@@ -1,0 +1,33 @@
+Package: zly
+Type: Package
+Title: zlyHelper
+Version: 0.1.0
+Authors@R: 
+  person(given = "ly",
+         family = "z",
+         role = c("aut","cre"),
+         email = "zhang511laoqi@163.com")
+Maintainer: zly <zhang511laoqi@163.com>
+Description: Helper functions,some very useful functions.
+License: AGPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10),
+    tidyverse
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Imports:
+    dplyr,
+    magrittr,
+    readxl,
+    rlang,
+    stringr,
+    tidyxl,
+    unpivotr
+VignetteBuilder: knitr
+Config/testthat/edition: 3

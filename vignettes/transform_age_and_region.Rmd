@@ -1,0 +1,30 @@
+---
+title: "transform age and region"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{transform age and region}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(zly)
+library(tidyverse)
+path <- system.file("extdata", "pop7.xlsx", package = "zly", mustWork = TRUE)
+pop7 <- readxl::read_xlsx(path)
+head(pop7)
+pop7 %>%
+  dplyr::mutate(
+    年龄 = transform_age(年龄),
+    省份 = transform_region(省份)
+  ) %>%
+  dplyr::rename(地区 = 省份) %>%
+  dplyr::sample_n(10)
+```

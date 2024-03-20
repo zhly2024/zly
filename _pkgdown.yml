@@ -1,0 +1,8 @@
+url: ~
+template:
+  bootstrap: 5
+  #theme: breeze-light
+  #bootswatch: materia
+  bslib:
+    pkgdown-nav-height: 80px
+
