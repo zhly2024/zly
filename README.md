@@ -8,6 +8,8 @@
 
 The goal of zly is to help me.
 
+[Manuals website](https://zly2024.netlify.app/)
+
 ## Installation
 
 You can install the development version of zly like so:
