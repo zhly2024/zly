@@ -1,0 +1,29 @@
+---
+title: "transform people census data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{transform people census data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(zly)
+path <- system.file("extdata", "pop7raw.xlsx", package = "zly", mustWork = TRUE)
+
+pop7_transformed <- transform_pop(path)
+
+head(pop7_transformed)
+
+pop7_transformed %>% 
+  mutate(age = transform_age(age),
+         province = transform_region(province))
+  
+```
